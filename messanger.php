@@ -1,6 +1,6 @@
 <?php
 session_start();
-$cn=mysqli_connect('localhost','root','','demo');
+$cn=mysqli_connect('sql204.epizy.com','epiz_25411521','55xHH8EfwV','epiz_25411521_demo');
 if(empty($_SESSION['login_id'])) header('location:index.php');
 $res=mysqli_query($cn,"select * from `login` where `user_id`=".$_SESSION['login_id']);
 $data=mysqli_fetch_assoc($res);
