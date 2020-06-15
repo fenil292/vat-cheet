@@ -1,7 +1,7 @@
 <?php
 ob_start();
     session_start();
-$cn=mysqli_connect('localhost','root','','demo');    
+$cn=mysqli_connect('sql204.epizy.com','epiz_25411521','55xHH8EfwV','epiz_25411521_demo');  
     if(!empty($_SESSION['login_id'])) header('location:messanger.php');
     if(@$_POST['login'])
     {
