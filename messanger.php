@@ -1,5 +1,6 @@
 <?php
 session_start();
+echo @$_SESSION['login_id'];
 $cn=mysqli_connect('sql12.freemysqlhosting.net','sql12348844','zgQFipGL3B','sql12348844');
 if(empty($_SESSION['login_id'])) header('location:index.php');
 $res=mysqli_query($cn,"select * from `login` where `user_id`=".$_SESSION['login_id']);
@@ -151,7 +152,7 @@ body {
         });*/
     });
 </script>
-<script src="./js/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="js/nodec.js"></script>
 </body>
 </html>
