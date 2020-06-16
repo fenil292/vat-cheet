@@ -1,7 +1,7 @@
 <?php
-/*ob_start();
+ob_start();
     session_start();
-$cn=mysqli_connect('sql204.epizy.com','epiz_25411521','55xHH8EfwV','epiz_25411521_demo');*/
+$cn=mysqli_connect('sql12.freemysqlhosting.net','sql12348844','zgQFipGL3B','sql12348844');
 /*if(mysqli_connect('sql204.epizy.com','epiz_25411521','55xHH8EfwV','epiz_25411521_demo'))
 {
 	echo 'connected';
