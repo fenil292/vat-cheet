@@ -1,8 +1,16 @@
 <?php
 /*ob_start();
     session_start();
-$cn=mysqli_connect('sql204.epizy.com','epiz_25411521','55xHH8EfwV','epiz_25411521_demo');  
-    if(!empty($_SESSION['login_id'])) header('location:messanger.php');
+$cn=mysqli_connect('sql204.epizy.com','epiz_25411521','55xHH8EfwV','epiz_25411521_demo');*/
+if(mysqli_connect('sql204.epizy.com','epiz_25411521','55xHH8EfwV','epiz_25411521_demo'))
+{
+	echo 'connected';
+}
+else
+{
+	echo 'not connected';
+}
+    /*if(!empty($_SESSION['login_id'])) header('location:messanger.php');
     if(@$_POST['login'])
     {
         $res=mysqli_query($cn,"select `user_id` from `login` where `mob`=".$_POST['mob']." and `pwd`='".$_POST['pwd']."'");
