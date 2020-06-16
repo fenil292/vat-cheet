@@ -21,7 +21,7 @@ $cn=mysqli_connect('sql204.epizy.com','epiz_25411521','55xHH8EfwV','epiz_2541152
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login 123</title>
+	<title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
