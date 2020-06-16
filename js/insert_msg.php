@@ -3,7 +3,7 @@
     $date= date_default_timezone_set('Asia/Kolkata');
     $timestamp = date("Y-m-d H:i:s");
     $data=array();
-    $cn=mysqli_connect('localhost','root','','demo');
+    $cn=mysqli_connect('sql12.freemysqlhosting.net','sql12348844','zgQFipGL3B','sql12348844');
     $m="insert into `chat`(`msg`,`user_id`,`time`) values('".$_POST["message"]."',".$_SESSION['login_id'].",'".$timestamp."')";
     mysqli_query($cn,$m);
     $name_res=mysqli_query($cn,"select `name` from `login` where `user_id`=".$_SESSION['login_id']);
