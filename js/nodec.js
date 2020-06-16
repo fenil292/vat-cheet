@@ -1,4 +1,4 @@
-var socket = io.connect('https://vat-cheet.herokuapp.com:8080');
+var socket = io.connect('https://vat-cheet.herokuapp.com');
 $( "#send" ).click( function() {
 	var m = $( "#msgbox" ).val();
 	var name= document.getElementById('name');
