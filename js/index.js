@@ -2,6 +2,7 @@ var express=require('express');
 var socket=require('socket.io');
 var http = require('http');
 var app=express();
+const port = process.env.PORT || 8080;
 var server = http.createServer(app);
 /*var serever=app.listen(8000,function(){
 	console.log("hello world");
@@ -18,5 +19,5 @@ io.sockets.on( 'connection', function( client ) {
 	});
 });
 
-server.listen( 8080 );
+server.listen( port );
 //app.use(express.static('public'));
