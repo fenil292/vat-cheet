@@ -1,9 +1,9 @@
 <?php
 session_start();
-echo @$_SESSION['login_id'];
+$id=$_SESSION['login_id'];
 $cn=mysqli_connect('sql12.freemysqlhosting.net','sql12348844','zgQFipGL3B','sql12348844');
 if(empty($_SESSION['login_id'])) header('location:index.php');
-$res=mysqli_query($cn,"select * from `login` where `user_id`=".$_SESSION['login_id']);
+$res=mysqli_query($cn,"select * from `login` where `user_id`=".$id);
 $data=mysqli_fetch_assoc($res);
 ?>
 <!DOCTYPE html>
@@ -105,7 +105,7 @@ body {
   <?php
       $msg_res=mysqli_query($cn,"select * from `chat`");
       while($m_data=mysqli_fetch_assoc($msg_res)) {
-        if($m_data['user_id']!=$_SESSION['login_id'])
+        if($m_data['user_id']!=$id)
         {
             $name_res=mysqli_query($cn,"select `name` from `login` where `user_id`=".$m_data['user_id']);
             $name=mysqli_fetch_assoc($name_res);
@@ -117,7 +117,7 @@ body {
 </div>
 <div style="width: 100%;">
     <input type="text" id="msgbox" style="width: 90%;" placeholder="Type a message" autofocus="autofocus">
-    <button id="send" style="position: absolute;">Send</button><input type="number"  id="id" value="<?php echo @$_SESSION['login_id']; ?>" style="display:none;" disabled>
+    <button id="send" style="position: absolute;">Send</button><input type="number"  id="id" value="<?php echo @id; ?>" style="display:none;" disabled>
 </div>
 
 <script type="text/javascript">
