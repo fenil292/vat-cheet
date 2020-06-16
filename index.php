@@ -10,7 +10,7 @@ else
 {
 	echo 'not connected';
 }*/
-    /*if(!empty($_SESSION['login_id'])) header('location:messanger.php');
+    if(!empty($_SESSION['login_id'])) header('location:messanger.php');
     if(@$_POST['login'])
     {
         $res=mysqli_query($cn,"select `user_id` from `login` where `mob`=".$_POST['mob']." and `pwd`='".$_POST['pwd']."'");
@@ -24,7 +24,7 @@ else
         {
             $msg="Mobile No or Password Are Incorrect!";
         }
-    }*/
+    }
 ?>
 <!DOCTYPE html>
 <html>
