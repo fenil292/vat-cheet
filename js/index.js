@@ -4,9 +4,12 @@ var http = require('http');
 var app=express();
 const port = process.env.PORT || 8080;
 var server = http.createServer(app);
-/*var serever=app.listen(8000,function(){
+var serever=app.listen(port,function(){
 	console.log("hello world");
-});*/
+});
+app.get('/',function(req,res){
+	res.send("fenil virani");
+});
 var io = socket.listen( server );
 
 io.sockets.on( 'connection', function( client ) {
