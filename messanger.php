@@ -1,6 +1,6 @@
 <?php
 session_start();
-$cn=mysqli_connect('sql204.epizy.com','epiz_25411521','55xHH8EfwV','epiz_25411521_demo');
+$cn=mysqli_connect('sql12.freemysqlhosting.net','sql12348844','zgQFipGL3B','sql12348844');
 if(empty($_SESSION['login_id'])) header('location:index.php');
 $res=mysqli_query($cn,"select * from `login` where `user_id`=".$_SESSION['login_id']);
 $data=mysqli_fetch_assoc($res);
@@ -151,7 +151,7 @@ body {
         });*/
     });
 </script>
-<script src="./js/node_modules/socket.io-client/dist/socket.io.js"></script>
+<script src="./js/socket.io.js"></script>
     <script src="js/nodec.js"></script>
 </body>
 </html>
