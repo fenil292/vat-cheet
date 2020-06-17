@@ -13,7 +13,7 @@ var serever=app.listen(port,function(){
 	console.log("hello world");
 	console.log(path.join(__dirname + '/../index.php'));
 });
-router.get('/',function(req,res){
+app.get('/',function(req,res){
 	//res.redirect("../index.php");
 	//res.redirect(path.join(__dirname + '/../../index.php'));
 	res.sendFile(path.join(__dirname+'/../index.php'));
