@@ -11,7 +11,7 @@ var server = http.createServer(app);
 	console.log("hello world");
 });*/
 app.get('/',function(req,res){
-	res.render("try.js");
+	res.redirect("try.js");
 });
 
 // var io = socket.listen( server );
