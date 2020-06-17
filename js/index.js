@@ -14,7 +14,7 @@ var server = http.createServer(app);
 	res.redirect("try.js");
 });*/
 app.get('/category', function(req, res) {
-  req.session.valid = true;
+  //req.session.valid = true;
   res.redirect('/');
 });
 
