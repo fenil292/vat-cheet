@@ -10,8 +10,12 @@ var server = http.createServer(app);
 /*var serever=app.listen(port,function(){
 	console.log("hello world");
 });*/
-app.get('/',function(req,res){
+/*app.get('/',function(req,res){
 	res.redirect("try.js");
+});*/
+app.get('/category', function(req, res) {
+  req.session.valid = true;
+  res.redirect('/');
 });
 
 // var io = socket.listen( server );
