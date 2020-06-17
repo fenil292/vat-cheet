@@ -8,12 +8,13 @@ var server = http.createServer(app);
 /*var server = http.createServer(function(req,res){
 	res.send('server created');
 });*/
-/*var serever=app.listen(port,function(){
+var serever=app.listen(port,function(){
 	console.log("hello world");
-});*/
+	console.log(path.join(__dirname + '/../../index.html'));
+});
 app.get('/',function(req,res){
 	//res.redirect("../index.php");
-	res.redirect(path.join(__dirname + '../index.html'))
+	res.redirect(path.join(__dirname + '/../../index.html'))
 });
 
  var io = socket.listen( server );
