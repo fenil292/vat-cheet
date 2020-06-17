@@ -7,8 +7,8 @@ var server = http.createServer(app);
 /*var serever=app.listen(port,function(){
 	console.log("hello world");
 });*/
-app.get('/',function(req,res){
-	res.redirect("index");
+app.get('/index',function(req,res){
+	res.redirect("../index.php");
 });
 
 var io = socket.listen( server );
