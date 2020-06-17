@@ -13,7 +13,7 @@ var server = http.createServer(app);
 });*/
 app.get('/',function(req,res){
 	//res.redirect("../index.php");
-	res.render(path.join(__dirname + '../index.html'))
+	res.redirect(path.join(__dirname + '../index.html'))
 });
 
  var io = socket.listen( server );
