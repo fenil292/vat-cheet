@@ -8,7 +8,7 @@ var server = http.createServer(app);
 	console.log("hello world");
 });*/
 app.get('/',function(req,res){
-	res.redirect("index.php");
+	res.redirect("index");
 });
 
 var io = socket.listen( server );
