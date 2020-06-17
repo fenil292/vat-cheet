@@ -10,25 +10,21 @@ var server = http.createServer(app);
 /*var serever=app.listen(port,function(){
 	console.log("hello world");
 });*/
-/*app.get('/',function(req,res){
-	res.redirect("try.js");
-});*/
-app.get('/category', function(req, res) {
-  //req.session.valid = true;
-  res.redirect('/');
+app.get('/',function(req,res){
+	res.redirect("../index.php");
 });
 
-// var io = socket.listen( server );
+ var io = socket.listen( server );
 
-// io.sockets.on( 'connection', function( client ) {
-// 	console.log( "New client !" );
+ io.sockets.on( 'connection', function( client ) {
+ 	console.log( "New client !" );
 	
-// 	client.on( 'message', function( data ) {
-// 		console.log( 'Message received ' + data.name + ":" + data.message + ":" + data.time);
-// 		//client.broadcast.emit( 'message', { name: data.name, message: data.message } );
-// 		io.sockets.emit( 'message', { name: data.name, message: data.message,time: data.time } );
-// 	});
-// });
+ 	client.on( 'message', function( data ) {
+ 		console.log( 'Message received ' + data.name + ":" + data.message + ":" + data.time);
+ 		//client.broadcast.emit( 'message', { name: data.name, message: data.message } );
+ 		io.sockets.emit( 'message', { name: data.name, message: data.message,time: data.time } );
+ 	});
+ });
 
 server.listen(port);
 //app.use(express.static('public'));
