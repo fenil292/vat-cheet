@@ -3,13 +3,13 @@ var socket=require('socket.io');
 var http = require('http');
 var app=express();
 //const port = process.env.PORT || 8080;
-//var server = http.createServer(app);
+var server = http.createServer(app);
 /*var serever=app.listen(port,function(){
 	console.log("hello world");
 });*/
 app.get('/',function(req,res){
 	res.send("dsdsdasdasdas");
-});
+}).listen(8080);
 
 // var io = socket.listen( server );
 
