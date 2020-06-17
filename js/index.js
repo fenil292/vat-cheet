@@ -2,20 +2,20 @@ var express=require('express');
 var socket=require('socket.io');
 var http = require('http');
 var app=express();
-const path = require('path');
+//const path = require('path');
 const port = process.env.PORT || 8080;
 var server = http.createServer(app);
 /*var server = http.createServer(function(req,res){
 	res.send('server created');
 });*/
-var serever=app.listen(port,function(){
+/*var serever=app.listen(port,function(){
 	console.log("hello world");
 	console.log(path.join(__dirname + '/../../index.php'));
 });
 app.get('/',function(req,res){
 	//res.redirect("../index.php");
 	res.redirect(path.join(__dirname + '/../../index.php'));
-});
+});*/
 
  var io = socket.listen( server );
 
