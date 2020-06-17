@@ -10,9 +10,7 @@ var server = http.createServer(app);
 /*app.get('/',function(req,res){
 	res.send("fenil virani");
 });*/
-app.get('/', function(req, res){
-    res.redirect('/index.php');
-});
+
 var io = socket.listen( server );
 
 io.sockets.on( 'connection', function( client ) {
