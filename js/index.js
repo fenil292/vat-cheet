@@ -42,6 +42,8 @@ app.get('/', function(req, res) {
  		io.sockets.emit( 'message', { name: data.name, message: data.message,time: data.time } );
  	});
  });
-
-server.listen(port);
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
+//server.listen(port);
 //app.use(express.static('public'));
