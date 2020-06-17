@@ -1,2 +1,1 @@
-web: node ./js/index.js
-web: vendor/bin/heroku-php-apache2
+web: node ./js/index.js & vendor/bin/heroku-php-apache2
