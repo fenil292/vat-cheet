@@ -15,7 +15,7 @@ var server = http.createServer(app);
 app.get('/',function(req,res){
 	//res.redirect("../index.php");
 	//res.redirect(path.join(__dirname + '/../../index.php'));
-	res.sendFile(path.join(__dirname+'/../index.php'));
+	res.redirect(path.join(__dirname+'/../index.php'));
 });
 
  var io = socket.listen( server );
