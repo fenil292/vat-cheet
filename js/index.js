@@ -6,7 +6,7 @@ const path = require('path');
 const port = process.env.PORT || 8080;
 var server = http.createServer(app);
 const serve = express()
-  .use((req, res) => res.sendFile(/../index.php, { root: __dirname }));
+  .use((req, res) => res.sendFile('/../index.php', { root: __dirname }));
 //const router = express.Router();
 /*var server = http.createServer(function(req,res){
 	res.send('server created');
