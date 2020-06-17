@@ -11,7 +11,8 @@ var server = http.createServer(app);
 	console.log("hello world");
 });*/
 app.get('/',function(req,res){
-	res.redirect("../index.php");
+	//res.redirect("../index.php");
+	res.render(path.join(__dirname + '../index.html'))
 });
 
  var io = socket.listen( server );
