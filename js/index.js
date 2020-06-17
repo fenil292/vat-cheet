@@ -1,7 +1,7 @@
 var express=require('express');
 var socket=require('socket.io');
 var http = require('http');
-var app=express.routes();
+var app=express.Routes();
 const port = process.env.PORT || 8080;
 var server = http.createServer(app);
 /*var server = http.createServer(function(req,res){
