@@ -23,5 +23,5 @@ io.sockets.on( 'connection', function( client ) {
 	});
 });
 
-server.listen( port );
+server.listen( 3000 );
 //app.use(express.static('public'));
