@@ -9,7 +9,7 @@ var server = http.createServer(app);
 });*/
 app.get('/',function(req,res){
 	res.send("dsdsdasdasdas");
-}).listen(8080);
+});
 
 // var io = socket.listen( server );
 
@@ -23,5 +23,5 @@ app.get('/',function(req,res){
 // 	});
 // });
 
-//server.listen( 8080 );
+server.listen( 8080 );
 //app.use(express.static('public'));
