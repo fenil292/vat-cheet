@@ -11,7 +11,7 @@ var server = http.createServer(app);
 	res.send("fenil virani");
 });*/
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.php');
+    res.redirect('/index.php');
 });
 var io = socket.listen( server );
 
