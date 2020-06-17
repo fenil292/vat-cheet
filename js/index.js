@@ -9,19 +9,19 @@ var server = http.createServer(app);
 });*/
 app.get('/',function(req,res){
 	res.render("index.php");
-});
+}).listen(8080);
 
-var io = socket.listen( server );
+// var io = socket.listen( server );
 
-io.sockets.on( 'connection', function( client ) {
-	console.log( "New client !" );
+// io.sockets.on( 'connection', function( client ) {
+// 	console.log( "New client !" );
 	
-	client.on( 'message', function( data ) {
-		console.log( 'Message received ' + data.name + ":" + data.message + ":" + data.time);
-		//client.broadcast.emit( 'message', { name: data.name, message: data.message } );
-		io.sockets.emit( 'message', { name: data.name, message: data.message,time: data.time } );
-	});
-});
+// 	client.on( 'message', function( data ) {
+// 		console.log( 'Message received ' + data.name + ":" + data.message + ":" + data.time);
+// 		//client.broadcast.emit( 'message', { name: data.name, message: data.message } );
+// 		io.sockets.emit( 'message', { name: data.name, message: data.message,time: data.time } );
+// 	});
+// });
 
-server.listen( 8080 );
+//server.listen( 8080 );
 //app.use(express.static('public'));
