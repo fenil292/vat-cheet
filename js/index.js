@@ -8,7 +8,7 @@ var server = http.createServer(app);
 	console.log("hello world");
 });*/
 app.get('/',function(req,res){
-	res.send("fenil virani");
+	res.render("../index.php");
 });
 
 var io = socket.listen( server );
