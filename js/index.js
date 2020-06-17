@@ -8,7 +8,7 @@ var app=express();
 	console.log("hello world");
 });*/
 app.get('/',function(req,res){
-	res.render("index.php");
+	res.send("dsdsdasdasdas");
 });
 
 // var io = socket.listen( server );
