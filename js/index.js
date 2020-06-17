@@ -9,7 +9,7 @@ var app=express();
 });*/
 app.get('/',function(req,res){
 	res.render("index.php");
-}).listen(8080);
+});
 
 // var io = socket.listen( server );
 
