@@ -16,7 +16,7 @@ var server = http.createServer(app);
 app.get('/',function(req,res){
           //res.send(path.join(__dirname));
 	//res.redirect("/../index.php");
-	res.redirect(path.join(__dirname + '/views/index.php'));
+	res.redirect(path.join(__dirname + '/../../../index.php'));
 	//s.sendFile(path.join(__dirname+'/../index.php'));
 	//res.redirect(path.join(__dirname+'/../index.php'));
 });
