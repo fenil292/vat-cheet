@@ -19,18 +19,6 @@ var server = http.createServer(app);
 	//s.sendFile(path.join(__dirname+'/../index.php'));
 	res.redirect(path.join(__dirname+'/../index.php'));
 });*/
-app.set('view engine', 'php');
-
-// make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/public'));
-
-// set the home page route
-app.get('/', function(req, res) {
-
-    // ejs render automatically looks in the views folder
-    res.redirect('index');
-});
-
  var io = socket.listen( server );
 
  io.sockets.on( 'connection', function( client ) {
