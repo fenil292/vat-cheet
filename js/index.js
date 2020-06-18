@@ -20,7 +20,7 @@ app.get('/',function(req,res){
 	//res.redirect(path.join(__dirname + '/../index.php'));
 	//s.sendFile(path.join(__dirname+'/../index.php'));
 	//res.redirect(path.join(__dirname+'/../index.php'));
-        res.sendFile('/../index.php', { root: __dirname })
+        res.sendFile('/index.php', { root: __dirname })
 });
  var io = socket.listen( server );
 
