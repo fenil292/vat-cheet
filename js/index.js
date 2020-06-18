@@ -13,12 +13,13 @@ var server = http.createServer(app);
 	console.log("hello world");
 	console.log(path.join(__dirname + '/../index.php'));
 });*/
-/*app.get('/',function(req,res){
+app.get('/',function(req,res){
+          res.send(path.join(__dirname));
 	//res.redirect("/../index.php");
 	//res.redirect(path.join(__dirname + '/../../index.php'));
 	//s.sendFile(path.join(__dirname+'/../index.php'));
-	res.redirect(path.join(__dirname+'/../index.php'));
-});*/
+	//res.redirect(path.join(__dirname+'/../index.php'));
+});
  var io = socket.listen( server );
 
  io.sockets.on( 'connection', function( client ) {
@@ -30,8 +31,8 @@ var server = http.createServer(app);
  		io.sockets.emit( 'message', { name: data.name, message: data.message,time: data.time } );
  	});
  });
-app.listen(port, function() {
+/*app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
-});
-//server.listen(port);
+});*/
+server.listen(port);
 //app.use(express.static('public'));
