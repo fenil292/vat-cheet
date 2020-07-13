@@ -15,7 +15,8 @@ var server = http.createServer(app);
 });*/
 app.get('/',function(req,res){
           //res.send(path.join(__dirname));
-	 res.sendFile("/../index.php");
+	res.send('<script>window.location.href="/../index.php";</script>');
+	//res.sendFile("/../index.php");
         //res.sendFile(path.join(__dirname+'/../index.php'));
 	//res.redirect(path.join(__dirname + '/../index.php'));
 	//s.sendFile(path.join(__dirname+'/../index.php'));
