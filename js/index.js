@@ -13,6 +13,13 @@ var server = http.createServer(app);
 	console.log("hello world");
 	console.log(path.join(__dirname + '/../index.php'));
 });*/
+var phpExpress = require('php-express')({
+
+  // php is in your PATH
+  binPath: 'php'
+});
+
+app.engine('php', phpExpress.engine);
 app.set('view engine', 'php');
 
 app.get('/',function(req,res){
