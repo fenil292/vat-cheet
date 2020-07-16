@@ -21,7 +21,7 @@ var phpExpress = require('php-express')({
 
 app.engine('php', phpExpress.engine);
 app.set('view engine', 'php');
-
+app.all(/.+\.php$/, phpExpress.router);
 app.get('/',function(req,res){
           //res.send(path.join(__dirname));
 	//res.send('<script>window.location.href="/../index.php";</script>');
