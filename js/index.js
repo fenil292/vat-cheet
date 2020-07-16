@@ -13,7 +13,7 @@ var server = http.createServer(app);
 	console.log("hello world");
 	console.log(path.join(__dirname + '/../index.php'));
 });*/
-var phpExpress = require('php-express')({
+/*var phpExpress = require('php-express')({
 
   // php is in your PATH
   binPath: 'php'
@@ -21,14 +21,15 @@ var phpExpress = require('php-express')({
 
 app.engine('php', phpExpress.engine);
 app.set('view engine', 'php');
-app.all(/.+\.php$/, phpExpress.router);
+app.all(/.+\.php$/, phpExpress.router);*/
 app.get('/',function(req,res){
           //res.send(path.join(__dirname));
 	//res.send('<script>window.location.href="/../index.php";</script>');
 	//res.sendFile("/../index.php");
         //res.sendFile(path.join(__dirname+'/public/index.php'));
 	//res.redirect(path.join(__dirname + '/public/index.php'));
-	res.render('index.php');
+	res.render('index', {});
+	//res.render('index.php');
 	//s.sendFile(path.join(__dirname+'/../index.php'));
 	//res.redirect(path.join(__dirname+'/../index.php'));
         //res.sendFile('/index.php', { root: __dirname })
