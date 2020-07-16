@@ -13,17 +13,20 @@ var server = http.createServer(app);
 	console.log("hello world");
 	console.log(path.join(__dirname + '/../index.php'));
 });*/
-/*app.get('/',function(req,res){
+app.set('view engine', 'php');
+
+app.get('/',function(req,res){
           //res.send(path.join(__dirname));
 	//res.send('<script>window.location.href="/../index.php";</script>');
 	//res.sendFile("/../index.php");
-        res.sendFile(path.join(__dirname+'/public/index.php'));
+        //res.sendFile(path.join(__dirname+'/public/index.php'));
 	//res.redirect(path.join(__dirname + '/public/index.php'));
+	res.render('index');
 	//s.sendFile(path.join(__dirname+'/../index.php'));
 	//res.redirect(path.join(__dirname+'/../index.php'));
         //res.sendFile('/index.php', { root: __dirname })
 
-});*/
+});
  var io = socket.listen( server );
 
  io.sockets.on( 'connection', function( client ) {
