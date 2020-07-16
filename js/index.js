@@ -21,7 +21,7 @@ app.get('/',function(req,res){
 	//res.sendFile("/../index.php");
         //res.sendFile(path.join(__dirname+'/public/index.php'));
 	//res.redirect(path.join(__dirname + '/public/index.php'));
-	res.render('index');
+	res.render('index.php');
 	//s.sendFile(path.join(__dirname+'/../index.php'));
 	//res.redirect(path.join(__dirname+'/../index.php'));
         //res.sendFile('/index.php', { root: __dirname })
