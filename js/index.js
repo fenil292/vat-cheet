@@ -1,9 +1,7 @@
 var express=require('express');
 var socket=require('socket.io');
 var http = require('http');
-var connect = require("connect");
-var app = connect.createServer().use(connect.static(__dirname + '/public'));
-//var app=express();
+var app=express();
 const path = require('path');
 const port = process.env.PORT || 8080;
 var server = http.createServer(app);
@@ -15,17 +13,17 @@ var server = http.createServer(app);
 	console.log("hello world");
 	console.log(path.join(__dirname + '/../index.php'));
 });*/
-/*app.get('/',function(req,res){
+app.get('/',function(req,res){
           //res.send(path.join(__dirname));
-	res.send('<script>window.location.href="/../index.php";</script>');
+	//res.send('<script>window.location.href="/../index.php";</script>');
 	//res.sendFile("/../index.php");
         //res.sendFile(path.join(__dirname+'/../index.php'));
-	//res.redirect(path.join(__dirname + '/../index.php'));
+	res.redirect(path.join(__dirname + '/public/index.php'));
 	//s.sendFile(path.join(__dirname+'/../index.php'));
 	//res.redirect(path.join(__dirname+'/../index.php'));
         //res.sendFile('/index.php', { root: __dirname })
 
-});*/
+});
  var io = socket.listen( server );
 
  io.sockets.on( 'connection', function( client ) {
