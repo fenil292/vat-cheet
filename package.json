@@ -10,7 +10,6 @@
   "author": "fenil virani",
   "license": "ISC",
   "dependencies": {
-    "php": "^7.4.8",
     "express": "^4.17.1",
     "socket.io": "^2.3.0"
   },
