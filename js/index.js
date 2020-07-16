@@ -22,7 +22,7 @@ var server = http.createServer(app);
 app.engine('php', phpExpress.engine);
 app.set('view engine', 'php');
 app.all(/.+\.php$/, phpExpress.router);*/
-app.get('/',function(req,res){
+/*app.get('/',function(req,res){
           //res.send(path.join(__dirname));
 	//res.send('<script>window.location.href="/../index.php";</script>');
 	//res.sendFile("/../index.php");
@@ -35,7 +35,7 @@ app.get('/',function(req,res){
 	//res.redirect(path.join(__dirname+'/../index.php'));
         //res.sendFile('/index.php', { root: __dirname })
 
-});
+});*/
  var io = socket.listen( server );
 
  io.sockets.on( 'connection', function( client ) {
